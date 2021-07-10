@@ -137,16 +137,51 @@
         <p>This is done by using the element "table".</p>
         <p>"tr" element is used to add a row.</p>
         <p>To add data in the cell, use the element "td".</p>
-        <p>To use title headings, use the element "th"</p>
+        <p>To use title headings, use the element "th" and the "scope" attribute to equate to "row" or "col"</p>
+        <p>Data can span to multiple columns or take up multiple cells, this can be accounted for by the attribute "colspan" which takes an integer to give the number of columns it spans across.</p>
+        <p>Data can also span multiple rows using the attribute "rowspan"</p>
+        <p>Table can be separated to table body using the "tbody" element, table head using the "thead" element and table footer using the "tfoot" element.</p>
         <table>
             <tr>
-                <td>Row 1 Column 1,</td>
-                <td>Row 1 Column 2</td>
+                <thead>
+                    <th></th>
+                    <th scope="col">COLUMN 1</th>
+                    <th scope="col">COLUMN 2</th>
+                </thead>
             </tr>
-            <tr>
-                <td>Row 2 Column 1,</td>
-                <td>Row 2 Column 2</td>
-            </tr>
+            <tbody>
+                <tr>
+                    <th scope="row">ROW 1</th>
+                    <td>Row 1 Column 1,</td>
+                    <td>Row 1 Column 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">ROW 2</th>
+                    <td>Row 2 Column 1,</td>
+                    <td>Row 2 Column 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">ROW 3</th>
+                    <td colspan="2">Row 3 Column 1 and Column 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">ROW 4</th>
+                    <td>Row 4 Column 1,</td>
+                    <td rowspan="2">Row 4 and 5 Column 2</td>
+                </tr>
+                <tr>
+                    <th scope="row">ROW 5</th>
+                    <td>Row 5 Column 1,</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row">ROW 6</th>
+                    <td>R6C1</td>
+                    <td>R6C2</td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </body>
