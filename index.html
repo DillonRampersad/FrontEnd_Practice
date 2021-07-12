@@ -184,5 +184,45 @@
             </tfoot>
         </table>
     </div>
+    <div id="Forms">
+        <h2>Forms</h2>
+        <p>Forms can be used to collect information, to create a form, the element "form" is used.</p>
+        <p>The "form" element contains 2 attributes, "action" and "method". action determines where the information is sent, eg "/RelativePage.html" and method attribute is assigned a HTTP verb that is included in the HTTP request.(eg. "POST")</p>
+        <form action="/RelativePage.html" method="POST">
+            <h3>Form:</h3>
+            <p>This is a form.</p>
+            
+            <h5>Text Input</h5>
+            <p>To input text or information, an "input" element is used, the input element has an attribute of  "type" which determines how it renders on a webpage and what kind of data it can accept. (eg. "text"). The input element also contains a "name" attribute as without the name attribute the information in the input won't be sent when the form is submitted.</p>
+            <p>Note: the "input" element does not need closing tags.</p>
+            <h4>For instance</h4>
+            <input type="text" name="Name">
+            
+            <p>The input element also has an attribute of "value" which stores the inputted message and is paired with the name attribute to send to its location stored in the <em>action</em> attribute. The value attribute can also be pre-filled.</p>
+            <input type="text" name="Surname" value="information Here">
+            
+            <h5>Adding Labels</h5>
+            <p>Though we added an input, it needs to be labelled, this is done by the "label" element, also a "for" attribute is added to "label" to associate the label with the input, an "id" attribute is added to the "input" element to link to the label using the <em>for</em> attribute.</p>
+            <label for="username">Username</label>
+            <input type="text" name="Username" id="username">
+        </form>
+    </div>
+    <div id="Forms-Password">
+        <form action="/RelativePage.html" method="POST">
+            <h5>Password Input</h5>
+            <p>For sensitive information such as pins or passwords use the type = "password" to conceal the information being entered.</p>
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+        </form>
+    </div>
+    <div id="Form-NumberType">
+        <form action="/RelativePage.html" method="POST">
+            <h5>Number Input</h5>
+            <p>To limit the data being entered into a field as just number and some odd characters like (+, -, .) the <em>type</em> attribute can be set to "number", also adding a "step" attribute and setting it to "1" can allow for an arrow menu to select numbers</p>
+            <label for="EnterNumber">Enter Number</label>
+            <input type="number" name="EnterNumber" id="EnterNumber" step="1">
+            
+        </form>
+    </div>
 </body>
 </html>
