@@ -221,8 +221,23 @@
             <p>To limit the data being entered into a field as just number and some odd characters like (+, -, .) the <em>type</em> attribute can be set to "number", also adding a "step" attribute and setting it to "1" can allow for an arrow menu to select numbers</p>
             <label for="EnterNumber">Enter Number</label>
             <input type="number" name="EnterNumber" id="EnterNumber" step="1">
-            
+            <p>To limit the range of numbers used, the type "range" can be use and the maximum and minimum numbers can be set using the "min" and "max" attribute in the <em>input</em> element (this would create a slider). Also adding a "step" attribute can impliment and giving a lower number can make the slider more fluid and a larger number makes the slider more noticable.</p>
+            <label for="Slider">Slider</label>
+            <span> &nbsp 0</span>
+            <input type="range" id="Slider" name="Slider" min="0" max="10" step="0.5">
+            <span>10</span>
         </form>
+    </div>
+    <div id="SectionAndHr">
+        <section class="section">
+            <h2>Section and Horizontal line separation</h2>
+            <p>"section" is an element used to represent a standalone section for which a more specific element can't be found.This usually has a heading as a child element. A section should make sense in the outline of a document, whereas <em>div</em> is used for styling.</p>
+            <p>"class" is a global attribute that has a list of classes pertaining to an element.</p>
+            <hr>
+            <p>"hr" is an element that is used to a break between paragraph-level elements. It is displayed as a horizontal line. (Like above and below.)</p>
+            <hr>
+        </section>
+        
     </div>
 </body>
 </html>
