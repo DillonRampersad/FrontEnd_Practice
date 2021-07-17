@@ -242,15 +242,80 @@
         <h3>Checkbox Input</h3>
         <p>Inputs can also be added using checkboxes if multiple inputs are required by using the type "checkbox"</p>
         <section class="checkboxes">
-            <input type="checkbox" id="checkbox1" name="checkboxes" value="checkbox1">
-            <label for="checkbox1">Checkbox 1</label>
-            <br>
-            <input type="checkbox" id="checkbox2" name="checkboxes" value="checkbox2">
-            <label for="checkbox2">Checkbox 2</label>
+            <form action="/RelativePage.html" method="POST">
+                <input type="checkbox" id="checkbox1" name="checkboxes" value="checkbox1">
+                <label for="checkbox1">Checkbox 1</label>
+                <br>
+                <input type="checkbox" id="checkbox2" name="checkboxes" value="checkbox2">
+                <label for="checkbox2">Checkbox 2</label>
+            </form>
         </section>
     </div>
-    <div id="FormRadioButton">
-        <h3>Radio Button</h3>
+    <div id="FormRadioButtonInput">
+        <h3>Radio Button Input</h3>
+        <p>In the case where you want many options but only one selection (eg. true or false) a radio button can be implimented by using type "radio".</p>
+        <p>Notice from the code snippet, radio buttons (like checkboxes) do not display their value. We have an associated <em>label</em> to represent the value of the radio button. To group radio buttons together, we assign them the same name and only one radio button from that group can be selected.</p>
+        
+        <form action="/RelativePage.html" method="POST">      
+            <section class="RadioButton">
+                <p>Choose true or false</p>
+                <input type="radio" id="true" name="answer" value="true">
+                <label for="true">True</label>
+                <br>
+                <input type="radio" id="false" name="answer" value="true">
+                <label for="false">False</label>
+            </section>
+        </form>
+    </div>
+    <div id="DropdownList">
+        <form>
+            <h3>Dropdown List</h3>
+            <p>A dropdown list allows our users to choose one option from an organized list.</p>
+            <p>This is done by using the "select" element and "option" element. The <em>option</em> element has an attribute "value" that is the option stated.</p>
+            <section class="DropdownList">
+                <label for="list">Dropdown List</label>
+                <select name="list" id="list">
+                    <option value="first">First</option>
+                    <option value="second">Second</option>
+                    <option value="third">Third</option>
+                </select>
+            </section>
+        </form>
+    </div>
+    <div id="DatalistInput">
+        <form>
+            <p>The "datalist" element is used with an "input type="text"" element. The <em>input</em> creates a text field that users can type into and filter options from the <em>datalist</em>.</p>
+            <p>The <em>input</em> also has a "list" attribute. The <em>input</em> is associated to the <em>datalist</em>> via the <em>input</em> "list" attribute and the id of the <em>datalist</em>.</p>
+            <p>While <em>select</em>> and <em>datalist</em> share some similarities, there are some major differences. In the associated <em>input</em>> element, users can type in the input field to search for a particular option. If none of the <em>option</em> match, the user can still use what they typed in. When the form is submitted, the value of the <em>input</em> "name" and the "value" of the option selected, or what the user typed in, is sent as a pair.</p>
+            <section class="DataList">
+                <label for="datalist">Datalist</label>
+                <input type="text" list="dlist" id="datalist" name="datalist">
+                <datalist id="dlist">
+                    <option value="first">First</option>
+                    <option value="second">Second</option>
+                    <option value="third">Third</option>
+                </datalist>
+            </section>
+        </form>
+    </div>
+    <div id="Textarea">
+        <h3>Textarea Element</h3>
+        <p>In the case of users needing to write more information to be submitted, a "textarea" element is used. The "textarea" element is used to create a bigger text field for users to write more text. We can add the attributes "rows" and "cols" to determine the amount of rows and columns for the "textarea".</p>
+        <section id="textarea"> 
+            <form>
+                <label for="textarea">Textarea:</label>
+                <br>
+                <textarea id="textarea" name="TextArea" rows="5" cols="30">Default Text.</textarea>
+            </form>
+        </section>
+    </div>
+    <div id="submit">
+        <h3>Submit Form</h3>
+        <p>Used to submit information filled out in the form. It is used by the <em>input type="submit"</em> a "value" attribute can be added to label the button.</p>
+        <form>
+            <input type="submit" value="send">
+            <input type="submit">
+        </form>
     </div>
 </body>
 </html>
