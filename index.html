@@ -319,7 +319,35 @@
     </div>
     <div id="Validation">
         <h2>Validation</h2>
-        
+        <p>Validation is the concept of checking user provided data against the required data. </p>
+        <section class="RequiredInput">
+            <h3>Required Input</h3>
+            <p>Sometimes we have fields in our <em>forms</em>> which are not optional, i.e. there must be information provided before we can submit it. To enforce this rule, we can add the "required" attribute to an <em>input</em> element.</p>
+            <form action="/RelativePage.html" method="POST">
+                <label for="requiredform">This field is required:</label>
+                <br>
+                <input id="requiredform" name="requiredform" type="text" required>
+                <input type="submit" value="submit">
+            </form>
+        </section>
+        <section class="MaxMin">
+            <h3>Set a Maximum and Minimum</h3>
+            <p>Another built-in validation we can use is to assign a minimum or maximum value for a number field, e.g. <em>input type="number"</em> and <em>input type="range"</em> To set a minimum acceptable value, we use the "min" attribute and assign a value. On the flip side, to set a maximum acceptable value, we assign the "max" attribute a value.</p>
+            <form action="/RelativePage.html" method="POST">
+                <label for="maxMin">Maximum and Minumum number between 0 and 5:</label>
+                <input id="maxMin" name="maxMin" type="number" min="0" max="5"> 
+                <input type="submit">
+            </form>
+        </section>
+        <section class="TextLength">
+            <h3>Checking Text Length</h3>
+            <p>In the previous exercise, we were able to use <em>min</em> and <em>max</em> to set acceptable minimum and maximum values in a number field. But what about text fields? There are certainly cases where we wouldn’t want our users typing more than a certain number of characters (think about the character cap for messages on Twitter). We might even want to set a minimum number of characters. Conveniently, there are built-in HTML5 validations for these situations. <br>To set a minimum number of characters for a text field, we add the "minlength" attribute and a value to set a minimum value. Similarly, to set the maximum number of characters for a text field, we use the "maxlength" attribute and set a maximum value.</p>
+            <form action="/RelativePage.html" method="POST">
+                <label for="MaxMinText">Maximum and Minumum text between 5 and 10 words:</label>
+                <input id="MaxMinText" name="MaxMinText" type="text" minlength="5" maxlength="10" required> 
+                <input type="submit">
+            </form>
+        </section>
     </div>
 </body>
 </html>
