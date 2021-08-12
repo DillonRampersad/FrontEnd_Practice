@@ -1,0 +1,50 @@
+/*---------------CSS TUTORIAL--------------*/
+/*TYPE SELECTORS*/
+/*
+p {
+    color: purple;
+}
+/*p is the type*/
+
+/*UNIVERSAL SELECTOR*/
+/*
+* {
+    border: 1px solid red;
+}
+
+/*CLASS SELECTOR*/
+.class {
+    color: teal;
+}
+
+.classTitle {
+    color: red;
+}
+
+/*MULTIPLE CLASSES*/
+.multiple {
+    color: green;
+}
+.classes {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/*ID SELECTOR*/
+#id {
+    font-family: cursive;
+    color:blue
+}
+
+/*ATTRIBUTE SELECTORS*/
+a[href*='florence'] {
+    color: lightgreen;
+}
+
+/*PSEUDO-CLASS SELECTORS*/
+p:hover {
+    background-color: rgb(165, 165, 165);
+}
+a:hover {
+    color: grey;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning CSS</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Learning CSS</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#LinkingCSS">Linking .css file</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="LinkingCSS">
+            <h2>Linking to a .CSS file.</h2>
+            <p>When HTML and CSS codes are in separate files, the files must be linked. Otherwise, the HTML file won’t be able to locate the CSS code, and the styling will not be applied.
+                You can use the "link" element to link HTML and CSS files together. The "link" element must be placed within the head of the HTML file. It is a self-closing tag and requires the following attributes:<br><br>
+                href — like the anchor element, the value of this attribute must be the address, or path, to the CSS file. e.g. "href=./style.css" <br><br>
+                rel — this attribute describes the relationship between the HTML file and the CSS file. Because you are linking to a stylesheet, the value should be set to stylesheet. e.g. "rel=stylesheet"</p>
+        </section>
+        <div id="selectors">
+            <h2>Selectors</h2>
+                <p>A selector is used to target the specific HTML element(s) to be styled by the declaration. One selector you may already be familiar with is the type selector. Just like its name suggests, the type selector matches the type of the element in the HTML document.</p>
+                <section class="type">
+                    <h3>Type</h3>
+                    <p>The type selector does not include the angle brackets. Since element types are often referred to by their opening tag name, the type selector is sometimes referred to as the tag name or element selector.</p>
+                </section>
+                <section class="universal">
+                    <h3>Universal</h3>
+                    <p>You learned how the type selector selects all elements of a given type. Well, the universal selector selects all elements of any type.<br> The universal selector uses the * character in the same place where you specified the type selector in a ruleset.</p>
+                </section>
+                <section class="class">
+                    <h3 class="classTitle">Class</h3>
+                    <p>CSS is not limited to selecting elements by their type. As you know, HTML elements can also have attributes. When working with HTML and CSS a class attribute is one of the most common ways to select an element.</p>
+                    <p>The paragraph element in the example above has a class attribute within the opening tag of the "p" element. The class attribute is set to 'class'. To select this element using CSS, we can create a ruleset with a class selector of .class.</p>
+                </section>
+                <section class="multipleClasses">
+                    <h3 class="multiple classes">Multiple Classes</h3>
+                    <p>It’s possible to add more than one class name to an HTML element’s class attribute. e.g. class="class1 class2"</p>
+                </section>
+                <section class="ID">
+                    <h3>ID</h3>
+                    <p id="id">Oftentimes it’s important to select a single element with CSS to give it its own unique style. If an HTML element needs to be styled uniquely, we can give it an ID using the id attribute. In contrast to class which accepts multiple values, and can be used broadly throughout an HTML document, an element’s id can only have a single value, and only be used once per page. To select an element’s ID with CSS, we prepend the id name with a number sign (#). For instance, if we wanted to select the HTML element in the example above.</p>
+                </section>
+                <section class="attribute">
+                    <h3>Attribute</h3>
+                    <p>The attribute selector can be used to target HTML elements that already contain attributes. Elements of the same type can be targeted differently by their attribute or attribute value. This alleviates the need to add new code, like the class or id attributes. The most basic syntax is an attribute surrounded by square brackets. In the example: [href] would target all elements with an href attribute and set to whatever.</p>
+                    <p>And it can get more granular from there by adding type and/or attribute values. One way is by using type[attribute*=value]. In short, this code selects an element where the attribute contains any instance of the specified value. For example: take the 2 images: "img src='/images/seasons/cold/winter.jpg'" and "img src='/images/seasons/warm/summer.jpg'"</p>
+                    <p>The HTML code above renders two img elements, each containing a src attribute with a value equaling a link to an image file. Like: img[src*='winter'] {height: 50px;} and img[src*='summer'] {height: 100px;}</p>
+                    <a href='https://www.nationalgeographic.com/travel/destination/florence' target='_blank'>Florence</a>
+                </section>
+                <section class="Pseudo-class">
+                    <h3>Pseudo-class</h3>
+                    <p>You may have observed how the appearance of certain elements can change, or be in a different state, after certain user interactions. For instance: When you click on an input element, and a blue border is added showing that it is in focus. Or, When you click on a blue a link to visit to another page, but when you return the link’s text is purple.</p>
+                    <p>These are all examples of pseudo-class selectors in action! In fact, :focus, :visited, :disabled, and :active are all pseudo-classes. Factors such as user interaction, site navigation, and position in the document tree can all give elements a different state with pseudo-class.A pseudo-class can be attached to any selector. It is always written as a colon : followed by a name. For example p:hover.</p>
+                </section>
+                <section class="ClassesAndIDs">
+                    <h3>Classes and IDs</h3>
+                    <p></p>
+                </section>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
